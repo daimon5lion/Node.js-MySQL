@@ -19,7 +19,7 @@ Technologies used: Javascript, Node.js, MySQL, inquirer, cli-table npms
 ### Challenge #1: Customer View
 
 ```
-Purchasing products with "no-stock reminder"
+Purchasing products with "no-stock reminder", and record sales data in both products and departments table.
 ```
 
 <img src="assets/images/1.jpg">
@@ -28,10 +28,27 @@ Purchasing products with "no-stock reminder"
 ### Challenge #2: Manager View
 
 ```
-Allow store manager to check low inventory, add inventory and add new products
+Allow store manager to check low inventory, add inventory and add new products.
 ```
 
 - Show inventories which lower than 10
   <img src="assets/images/3.jpg">
+- Add to inventories
+  <img src="assets/images/4.jpg">
+- Add new products
 
 ### Challenge #3: Supervisor View
+
+```
+Allow a supervisor to view sales data such as over head costs, product sales, and department profits.
+```
+
+- View product sales table by departments
+  <img src="assets/images/6.jpg">
+
+```
+Also allow a supervisoer to creat new departments.
+```
+
+- Creat new departments
+  <img src="assets/images/7.jpg">

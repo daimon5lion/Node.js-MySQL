@@ -180,9 +180,10 @@ function addToInventory() {
 
 function addNewProduct() {
   console.log(">>>>>>Adding New Product<<<<<<");
+
   var deptNames = [];
 
-  connection.query("SELECT * FROM products", function(err, res) {
+  connection.query("SELECT * FROM departments", function(err, res) {
     if (err) throw err;
     for (var i = 0; i < res.length; i++) {
       deptNames.push(res[i].department_name);
@@ -236,7 +237,7 @@ function addNewProduct() {
     ])
     .then(function(answer) {
       connection.query(
-        "INSERT INTO Products SET ?",
+        "INSERT INTO products SET ?",
         {
           product_name: answer.product,
           department_name: answer.department,
