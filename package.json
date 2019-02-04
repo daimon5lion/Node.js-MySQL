@@ -1,0 +1,26 @@
+{
+  "name": "Node.js-MySQL",
+  "version": "1.0.0",
+  "description": "## Bamazon app for Homework#12",
+  "main": "bamazonCustomer.js",
+  "dependencies": {
+    "cli-table": "^0.3.1",
+    "inquirer": "^6.2.2",
+    "mysql": "^2.16.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daimon5lion/Node.js-MySQL.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daimon5lion/Node.js-MySQL/issues"
+  },
+  "homepage": "https://github.com/daimon5lion/Node.js-MySQL#readme"
+}

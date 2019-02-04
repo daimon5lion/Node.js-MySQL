@@ -68,6 +68,10 @@ CREATE TABLE products
   ADD product_sales DECIMAL
         (10,2) NOT NULL;
 
+        ALTER TABLE products ALTER COLUMN product_sales
+        SET
+        DEFAULT 0;
+
 
 
 

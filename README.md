@@ -36,6 +36,7 @@ Allow store manager to check low inventory, add inventory and add new products.
 - Add to inventories
   <img src="assets/images/4.jpg">
 - Add new products
+  <img src="assets/images/5.jpg">
 
 ### Challenge #3: Supervisor View
 

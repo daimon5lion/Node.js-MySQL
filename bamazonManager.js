@@ -188,67 +188,67 @@ function addNewProduct() {
     for (var i = 0; i < res.length; i++) {
       deptNames.push(res[i].department_name);
     }
-  });
 
-  inquirer
-    .prompt([
-      {
-        type: "input",
-        name: "product",
-        message: "Product: ",
-        validate: function(value) {
-          if (value) {
-            return true;
-          } else {
-            return false;
-          }
-        }
-      },
-      {
-        type: "list",
-        name: "department",
-        message: "Department: ",
-        choices: deptNames
-      },
-      {
-        type: "input",
-        name: "price",
-        message: "Price: ",
-        validate: function(value) {
-          if (isNaN(value) === false) {
-            return true;
-          } else {
-            return false;
-          }
-        }
-      },
-      {
-        type: "input",
-        name: "quantity",
-        message: "Quantity: ",
-        validate: function(value) {
-          if (isNaN(value) == false) {
-            return true;
-          } else {
-            return false;
-          }
-        }
-      }
-    ])
-    .then(function(answer) {
-      connection.query(
-        "INSERT INTO products SET ?",
+    inquirer
+      .prompt([
         {
-          product_name: answer.product,
-          department_name: answer.department,
-          price: answer.price,
-          stock_quantity: answer.quantity
+          type: "input",
+          name: "product",
+          message: "Product: ",
+          validate: function(value) {
+            if (value) {
+              return true;
+            } else {
+              return false;
+            }
+          }
         },
-        function(err, res) {
-          if (err) throw err;
-          console.log("Another item was added to the store.");
+        {
+          type: "list",
+          name: "department",
+          message: "Department: ",
+          choices: deptNames
+        },
+        {
+          type: "input",
+          name: "price",
+          message: "Price: ",
+          validate: function(value) {
+            if (isNaN(value) === false) {
+              return true;
+            } else {
+              return false;
+            }
+          }
+        },
+        {
+          type: "input",
+          name: "quantity",
+          message: "Quantity: ",
+          validate: function(value) {
+            if (isNaN(value) == false) {
+              return true;
+            } else {
+              return false;
+            }
+          }
         }
-      );
-      start();
-    });
+      ])
+      .then(function(answer) {
+        connection.query(
+          "INSERT INTO products SET ?",
+          {
+            product_name: answer.product,
+            department_name: answer.department,
+            price: answer.price,
+            stock_quantity: answer.quantity
+          },
+          function(err, res) {
+            if (err) throw err;
+            console.log("Another item was added to the store.");
+            start();
+          }
+        );
+      });
+  });
 }

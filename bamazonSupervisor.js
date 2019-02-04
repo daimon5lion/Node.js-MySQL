@@ -125,7 +125,7 @@ function createNewDept() {
     ])
     .then(function(answer) {
       connection.query(
-        "INSERT INTO Departments SET ?",
+        "INSERT INTO departments SET ?",
         {
           department_name: answer.deptName,
           over_head_costs: answer.overHeadCost,
